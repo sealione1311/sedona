@@ -1,10 +1,25 @@
 .foto {
+  width: 320px;
+  margin: 0 auto;
   font-size: 14px;
   line-height: 24px;
+  outline: 1px dashed grey;
 }
 
 .foto__description,
 .foto__like {
   font-weight: 700;
   text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+.foto {
+  width: 768px;
+}
+}
+
+@media (min-width:1200px) {
+.foto {
+  width: 1200px;
+}
 }

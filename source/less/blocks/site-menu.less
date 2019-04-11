@@ -1,4 +1,6 @@
 .site-menu {
+  margin: 0;
+  padding: 0;
   font-family: @fonts;
   font-size: 18px;
   line-height: 40px;
@@ -10,4 +12,32 @@
 
 .site-menu a {
   color: #ffffff;
+}
+
+.site-menu__item {
+  margin: 0;
+  padding: 0;
+  box-shadow: 0px 1px 0 0 rgba(1, 1, 1, 0.2),
+  inset 0px 1px 0 0 rgba(255, 255, 255, 0.2);
+}
+
+@media (min-width: 768px) {
+.site-menu {
+  font-size: 14px;
+  line-height: 26px;
+  width: 768px;
+  min-height: 56px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.site-menu a {
+  color: @black;
+}
+
+.site-menu__item {
+  box-shadow: none;
+}
 }
