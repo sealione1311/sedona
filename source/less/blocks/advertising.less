@@ -1,14 +1,35 @@
 .advertising {
+  width: 320px;
+  margin: 0 auto;
   line-height: 26px;
   text-transform: uppercase;
+  text-align: center;
   background-color: white;
   color: @black;
+  outline: 1px dashed grey;
 }
 
 .advertising__title {
+  margin: 0;
+  padding: 0;
   font-size: 18px;
 }
 
 .advertising__text {
+  margin: 0;
+  padding: 0;
   font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  .advertising {
+    width: 768px;
+    min-height: 206px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .advertising {
+    width: 1200px;
+  }
 }

@@ -1,3 +1,27 @@
 .main-image {
-  background: #8fb3cc url("../../img/bg-back-mobile@1x.jpg") no-repeat;
+  width: 320px;
+  margin: 0 auto;
+  min-height: 389px;
+  background: #8fb3cc url("../img/bg-back-mobile@1x.jpg") no-repeat;
+  background-position: right -220px;
+  background-origin: content-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .main-image {
+    margin: 0 auto;
+    padding: 0;
+    width: 768px;
+    min-height: 518px;
+    background: #8fb3cc url("../img/bg-back-desktop@1x.jpg") no-repeat;
+  }
+}
+
+@media (min-width: 1200px) {
+  .main-image {
+    width: 1200px;
+  }
 }

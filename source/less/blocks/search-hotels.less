@@ -1,10 +1,33 @@
 .search-hotels {
+  width: 320px;
+  margin: 0 auto;
   font-size: 21px;
   line-height: 26px;
   text-transform: uppercase;
+  text-align: center;
+  outline: 1px dashed grey;
+}
+
+.search-hotels__title {
+  margin: 0;
+  padding: 0;
 }
 
 .search-hotels__text {
   font-size: 14px;
   line-height: 24px;
+}
+
+@media (min-width: 768px) {
+  .search-hotels {
+    margin: 0 auto;
+    width: 768px;
+    min-height: 318px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .search-hotels {
+    width: 1200px;
+  }
 }
