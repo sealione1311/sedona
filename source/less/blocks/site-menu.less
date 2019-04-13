@@ -22,14 +22,14 @@
 
 @media (min-width: 768px) {
   .site-menu {
-    font-size: 14px;
-    line-height: 26px;
     width: 768px;
     min-height: 56px;
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 26px;
     background-color: #ffffff;
     display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
+    flex-wrap: wrap;
   }
 
   .site-menu a {
@@ -38,5 +38,50 @@
 
   .site-menu__item {
     box-shadow: none;
+  }
+
+  .site-menu__item--main {
+    padding-left: 49px;
+    padding-right: 48px;
+  }
+
+  .site-menu__item--foto {
+    padding-left: 29px;
+    padding-right: 103px;
+  }
+
+  .site-menu__item--feedback {
+    padding-left: 104px;
+    padding-right: 21px;
+  }
+
+  .site-menu__item--link {
+    padding-left: 28px;
+    padding-right: 26px;
+  }
+}
+@media (min-width: 1200px) {
+  .site-menu {
+    width: 1200px;
+  }
+
+  .site-menu__item--main {
+    padding-left: 91px;
+    padding-right: 92px;
+  }
+
+  .site-menu__item--foto {
+    padding-left: 70px;
+    padding-right: 162px;
+  }
+
+  .site-menu__item--feedback {
+    padding-left: 158px;
+    padding-right: 67px;
+  }
+
+  .site-menu__item--link {
+    padding-left: 70px;
+    padding-right: 70px;
   }
 }
