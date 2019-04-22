@@ -1,15 +1,15 @@
 .page-footer {
   width: 320px;
   margin: 0 auto;
+  padding: 0;
   font-family: @fonts;
   text-transform: uppercase;
   text-align: center;
-  outline: 1px dashed grey;
 }
 
 .page-footer__hashtag {
-  margin: 0;
-  padding: 0;
+  margin: 0 auto;
+  padding: 33px 0 0;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
@@ -18,12 +18,33 @@
 @media (min-width: 768px) {
   .page-footer {
     width: 768px;
-    min-height: 206px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .page-footer__social,
+  .page-footer__copyright {
+    width: 256px;
+  }
+
+  .page-footer__hashtag {
+    width: 136px;
+    padding: 0;
+    margin: 45px auto;
   }
 }
 
 @media (min-width: 1200px) {
   .page-footer {
     width: 1200px;
+  }
+
+  .page-footer__social,
+  .page-footer__copyright {
+    width: 400px;
+  }
+
+  .page-footer__hashtag {
+    margin-left: 119px;
   }
 }
