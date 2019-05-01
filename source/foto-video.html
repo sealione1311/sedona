@@ -15,7 +15,11 @@
           <li class="site-menu__item site-menu__item--link"><a href="https://htmlacademy.ru/intensive/adaptive">html academy</a></li>
         </ul>
         <a class="main-nav__logo" href="index.html">
-        <img class="main-nav__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="84" alt="Логотип города Седона">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+            <img class="main-nav__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="84" alt="Логотип города Седона">
+          </picture>
         </a>
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
       </nav>
@@ -23,39 +27,69 @@
     <main class="main-page">
       <h1 class="visually-hidden">Добро пожаловать в великолепный город Седона</h1>
       <section class="main-image">
-        <img class="main-image__background" src="img/text-sedona.svg" width="" height="" alt="Добро пожаловать!">
+        <img class="main-image__background" src="img/text-sedona.svg" width="281" height="214" alt="Добро пожаловать!">
       </section>
       <section class="presentation">
         <h3 class="presentation__title">Фото и видео</h3>
         <p class="presentation__text">Не можете решиться на путешествие из-за курса?Фотографии помогут вам забыть о политике и экономике.</p>
       </section>
-      <section class="foto">
-        <a class="foto__big" href="#">
-        <img class="foto__image" src="img/photo-sunset-mobile@1x.jpg" width="" height="" alt="Неродные просторы"></a>
-        <p class="foto__description">Неродные просторы</p>
-        <p class="foto__author">Автор фото: Борис</p>
-        <span class="foto__like">1350</span>
-      </section>
-      <section class="foto">
-        <a class="foto__big" href="#">
-        <img class="foto__image" src="img/photo-cactus-mobile@1x.jpg" width="" height="" alt="Местная растительность"></a>
-        <p class="foto__description">Местная растительность</p>
-        <p class="foto__author">Автор фото: Сергей</p>
-        <span class="foto__like">143</span>
-      </section>
-      <section class="foto">
-        <a class="foto__big" href="#">
-        <img class="foto__image" src="img/photo-roads-mobile@1x.jpg" width="" height="" alt="Дорога на север"></a>
-        <p class="foto__description">Дорога на север</p>
-        <p class="foto__author">Автор фото: Петр</p>
-        <span class="foto__like">96</span>
-      </section>
-      <section class="foto">
-        <a class="foto__big" href="#">
-        <img class="foto__image" src="img/photo-bridge-mobile@1x.jpg" width="" height="" alt="Мост дьявола"></a>
-        <p class="foto__description">Мост дьявола</p>
-        <p class="foto__author">Автор фото: Антон</p>
-        <span class="foto__like">254</span>
+      <section class="fotos">
+        <section class="fotos__item foto foto--sunset">
+          <a class="foto__big" href="#">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-sunset-desktop@1x.jpg, img/photo-sunset-desktop@2x.jpg">
+              <source media="(min-width: 768px)" srcset="img/photo-sunset-tablet@1x.jpg, img/photo-sunset-tablet@2x.jpg">
+              <img class="foto__image foto__image--sunset" src="img/photo-sunset-mobile@1x.jpg" width="280" height="280" srcset="img/photo-sunset-mobile@2x.jpg" alt="Неродные просторы">
+            </picture>
+          </a>
+          <div class="foto__text">
+            <p class="foto__text--description">Неродные просторы</p>
+            <p class="foto__text--author">Автор фото: Борис</p>
+            <span class="foto__text--like">1350</span>
+          </div>
+        </section>
+        <section class="fotos__item foto">
+          <a class="foto__big" href="#">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-cactus-desktop@1x.jpg, img/photo-cactus-desktop@2x.jpg">
+              <source media="(min-width: 768px)" srcset="img/photo-cactus-tablet@1x.jpg, imgphoto-cactus-tablet@2x.jpg">
+              <img class="foto__image" src="img/photo-cactus-mobile@1x.jpg" srcset="img/photo-cactus-mobile@2x.jpg" width="280" height="280" alt="Местная растительность">
+            </picture>
+          </a>
+          <div class="foto__text">
+            <p class="foto__text--description">Местная растительность</p>
+            <p class="foto__text--author">Автор фото: Сергей</p>
+            <span class="foto__text--like">143</span>
+          </div>
+        </section>
+        <section class="fotos__item foto">
+          <a class="foto__big" href="#">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-roads-desktop@1x.jpg, img/photo-roads-desktop@2x.jpg">
+              <source media="(min-width: 768px)" srcset="img/photo-roads-tablet@1x.jpg, imgphoto-roads-tablet@2x.jpg">
+              <img class="foto__image" src="img/photo-roads-mobile@1x.jpg" srcset="img/photo-roads-mobile@2x.jpg" width="280" height="280" alt="Дорога на север">
+            </picture>
+          </a>
+          <div class="foto__text">
+            <p class="foto__text--description">Дорога на север</p>
+            <p class="foto__text--author">Автор фото: Петр</p>
+            <span class="foto__text--like">96</span>
+          </div>
+        </section>
+        <section class="foto__item foto foto--bridge">
+          <a class="foto__big" href="#">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.jpg, img/photo-bridge-desktop@2x.jpg">
+              <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.jpg, imgphoto-bridge-tablet@2x.jpg">
+              <img class="foto__image" src="img/photo-bridge-mobile@1x.jpg" srcset="img/photo-bridge-mobile@2x.jpg" width="280" height="280" alt="Мост дьявола">
+            </picture>
+          </a>
+          <div class="foto__text">
+            <p class="foto__text--description">Мост дьявола</p>
+            <p class="foto__text--author">Автор фото: Антон</p>
+            <span class="foto__text--like">254</span>
+          </div>
+        </section>
       </section>
     </main>
     <footer class="page-footer">
