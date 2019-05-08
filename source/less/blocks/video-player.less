@@ -50,3 +50,57 @@
 .video-player__remote-list--subtitles {
   margin-left: 110px;
 }
+
+@media (min-width: 768px) {
+  .video-player {
+    width: 768px;
+    margin: 0 auto;
+  }
+
+  .video-player__image {
+    width: 648px;
+    height: 499px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .video-player__remote {
+    width: 648px;
+    height: 93px;
+    background: rgba(0, 0, 0, 0.6) ;
+    left: 60px;
+    bottom: 0;
+  }
+
+  .video-player__remote-list {
+    width: 648px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+    .video-player__remote-list--replay{
+      order:-1;
+    }
+}
+
+@media (min-width: 1200px) {
+  .video-player {
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  .video-player__image {
+    width: 800px;
+    height: 500px;
+  }
+
+  .video-player__remote {
+    width: 800px;
+    left: 200px;
+    bottom: 0;
+  }
+
+  .video-player__remote-list {
+    width: 800px;
+  }
+}

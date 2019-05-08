@@ -29,52 +29,77 @@
       <section class="main-image">
         <img class="main-image__background" src="img/text-sedona.svg" width="281" height="214" alt="Добро пожаловать!">
       </section>
-      <section class="give-feedback">
-        <h3 class="give-feedback__title">Оставьте свой отзыв</h3>
-        <p class="give-feedback__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях
-        </p>
-      </section>
+      <div class="feedback">
+        <h3 class="feedback__title">Оставьте свой отзыв</h3>
+        <p class="feedback__text">Помогите нашим отелям стать лучше!Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+      </div>
       <section class="form">
         <form action="https://echo.htmlacademy.ru" method="post">
-          <fieldset class="form__introduce">
+          <fieldset class="form__introduce introduce">
             <legend>Представьтесь:</legend>
-            <label>Имя*<input type="text" required name="name">
-            </label>
-            <label>Фамилия*<input type="text" required name="second-name">
-            </label>
-            <label>Отчество<input type="text" name="middle-name">
-            </label>
+            <p class="introduce__name">
+              <label>Имя*:<input type="text" required name="name" placeholder="Петр">
+              </label>
+            </p>
+            <p class="introduce__surname">
+              <label>Фамилия*:<input type="text" required name="surname" placeholder="Иванов">
+              </label>
+            </p>
+            <p class="introduce__patronymic">
+              <label>Отчество:<input type="text" name="patronymic" placeholder="Александрович">
+              </label>
+            </p>
           </fieldset>
-          <fieldset class="form__contacts">
+          <fieldset class="form__contacts contacts">
             <legend>Контактная информация:</legend>
-            <label>Контактный телефон*<input type="text" required name="phone">
-            </label>
-            <label>Электронная почта*<input type="text" required name="e-mail">
-            </label>
+            <p class="contacts__tel">
+              <label>Контактный телефон*<input type="tel" required name="tel"placeholder="Введите телефон"pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}">
+              </label>
+            </p>
+            <p class="contacts__mail">
+              <label>Электронная почта*<input type="email" required name="email"placeholder="Введите email">
+              </label>
+            </p>
           </fieldset>
-          <fieldset class="form__impression">
+          <fieldset class="form__impression impression">
             <legend>Ваше общее впечатление:</legend>
+            <p class="impression__good">
             <label>Скорее положительное<input type="radio" name="impression" value="Скорее положительное">
             </label>
-            <label>Скорее отрицательное<input type="radio" name="impression" value="Скорее отрицательное">
-            </label>
-            <label>Затрудняюсь ответить<input type="radio" name="impression" value="Затрудняюсь ответить">
-            </label>
+            </p>
+            <p class="impression__bad">
+              <label>Скорее отрицательное<input type="radio" name="impression" value="Скорее отрицательное">
+              </label>
+            </p>
+            <p class="impression__none">
+              <label>Затрудняюсь ответить<input type="radio" name="impression" value="Затрудняюсь ответить">
+              </label>
+            </p>
           </fieldset>
           <fieldset class="form__sights">
             <legend>Посещенные достопримечательности:</legend>
+            <p class="sights__bridge">
             <label>Мост Дьявола<input type="checkbox" checked>
             </label>
+            </p>
+            <p class="sights__mountain">
             <label>Гора-Колокол<input type="checkbox" checked>
             </label>
+            </p>
+            <p class="sights__park">
             <label>Слайд-парк<input type="checkbox" checked>
             </label>
+            </p>
+            <p class="sights__rocks">
             <label>Красные скалы<input type="checkbox">
             </label>
+            </p>
           </fieldset>
-          <p class="form__comment">Опишите свои эмоции:</p>
-          <textarea name="comment" id="comment-field" rows="10">Опишите подробно все свои восторги</textarea>
-          <input type="submit" value="Отправить отзыв">
+          <div class="form__comment">
+            <p>Опишите свои эмоции:</p>
+            <textarea name="comment" id="comment-field" rows="7">Опишите подробно все свои восторги</textarea>
+          </div>
+          <button class="form__submit" type="submit">Отправить отзыв</button>
         </form>
       </section>
     </main>
