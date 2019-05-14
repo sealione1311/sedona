@@ -19,6 +19,19 @@
   box-shadow: 0 1px 0 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
 }
 
+@media (max-width: 767px) {
+  .site-menu__item:hover {
+    background-color: @bluedarker;
+  }
+
+  .site-menu__item:active {
+    background-color: @bluedark;
+  }
+
+  .site-menu__item a:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
 @media (min-width: 768px) {
   .site-menu {
     width: 768px;
@@ -32,6 +45,26 @@
 
   .site-menu a {
     color: @black;
+  }
+
+  .site-menu a:hover {
+    color: @blue;
+  }
+
+  .site-menu a:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  .site-menu__item--active a {
+    color: #766357;
+  }
+
+  .site-menu__item--active a:hover {
+    color: #604e43;
+  }
+
+  .site-menu__item--active a:active {
+    color: rgba(118, 99, 87, 0.3);
   }
 
   .site-menu__item {

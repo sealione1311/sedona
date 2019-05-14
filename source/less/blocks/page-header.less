@@ -1,0 +1,27 @@
+.page-header {
+  position: relative;
+  min-height: 56px;
+}
+
+.page-header__logo-image {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  bottom: -25px;
+  transform: translateX(-50%);
+}
+
+@media (min-width: 768px) {
+  .page-header__logo-image {
+    position: absolute;
+    left: 50%;
+    top: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .page-header__logo-image {
+    width: 188px;
+    height: 96px;
+  }
+}

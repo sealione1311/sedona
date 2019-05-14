@@ -7,20 +7,20 @@
   </head>
   <body>
     <header class= "page-header">
-      <nav class="main-nav">
+      <a class="page-header__logo" href="index.html">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+          <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="84" alt="Логотип города Седона">
+        </picture>
+      </a>
+      <nav class="main-nav main-nav--closed main-nav--nojs">
         <ul class="main-nav__list site-menu">
           <li class="site-menu__item site-menu__item--main"><a href="index.html">Главная</a></li>
           <li class="site-menu__item site-menu__item--foto"><a href="foto-video.html">Фото и видео</a></li>
-          <li class="site-menu__item site-menu__item--feedback"><a href="#">Форма отзыва</a></li>
+          <li class="site-menu__item site-menu__item--feedback site-menu__item--active"><a>Форма отзыва</a></li>
           <li class="site-menu__item site-menu__item--link"><a href="https://htmlacademy.ru/intensive/adaptive">html academy</a></li>
         </ul>
-        <a class="main-nav__logo" href="index.html">
-          <picture>
-            <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
-            <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
-            <img class="main-nav__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="84" alt="Логотип города Седона">
-          </picture>
-        </a>
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
       </nav>
     </header>
@@ -64,35 +64,49 @@
           <fieldset class="form__impression impression">
             <legend>Ваше общее впечатление:</legend>
             <p class="impression__good">
-            <label>Скорее положительное<input type="radio" name="impression" value="Скорее положительное">
-            </label>
+              <svg><circle r="23" cx="23" cy="23" width="46px" height="46px" viewBox="0 0 45 45" fill="#f2f2f2"/>
+              </svg>
+              <input class="visually-hidden" id="radio-good" type="radio" name="radio" value="Скорее положительное" checked>
+              <label for="radio-good">Скорее положительное</label>
             </p>
             <p class="impression__bad">
-              <label>Скорее отрицательное<input type="radio" name="impression" value="Скорее отрицательное">
-              </label>
+              <svg><circle r="23" cx="23" cy="23" width="46px" height="46px" viewBox="0 0 45 45" fill="#f2f2f2"/>
+              </svg>
+              <input class="visually-hidden" id="radio-bad" type="radio" name="radio" value="Скорее отрицательное">
+              <label for="radio-bad">Скорее отрицательное</label>
             </p>
             <p class="impression__none">
-              <label>Затрудняюсь ответить<input type="radio" name="impression" value="Затрудняюсь ответить">
-              </label>
+              <svg><circle r="23" cx="23" cy="23" width="46px" height="46px" viewBox="0 0 45 45" fill="#f2f2f2"/>
+              </svg>
+              <input class="visually-hidden" id="radio-none" type="radio" name="radio" value="Затрудняюсь ответить">
+              <label for="radio-none">Затрудняюсь ответить</label>
             </p>
           </fieldset>
           <fieldset class="form__sights">
             <legend>Посещенные достопримечательности:</legend>
             <p class="sights__bridge">
-            <label>Мост Дьявола<input type="checkbox" checked>
-            </label>
+              <svg><rect width="46px" height="46px" rx="5" viewBox="0 0 46 46" fill="#f2f2f2"/>
+              </svg>
+              <input class="visually-hidden" id="bridge" type="checkbox" checked>
+              <label for="bridge">Мост Дьявола</label>
             </p>
             <p class="sights__mountain">
-            <label>Гора-Колокол<input type="checkbox" checked>
-            </label>
+              <svg><rect width="46px" height="46px" rx="5" viewBox="0 0 46 46" fill="#f2f2f2"/>
+              </svg>
+              <input class="visually-hidden" id="mountain" type="checkbox" checked>
+              <label for="mountain">Гора-Колокол</label>
             </p>
             <p class="sights__park">
-            <label>Слайд-парк<input type="checkbox" checked>
-            </label>
+              <svg><rect width="46px" height="46px" rx="5" viewBox="0 0 46 46" fill="#f2f2f2"/>
+              </svg>
+              <input class="visually-hidden" id="park" type="checkbox" checked>
+              <label for="park">Слайд-парк</label>
             </p>
             <p class="sights__rocks">
-            <label>Красные скалы<input type="checkbox">
-            </label>
+              <svg><rect width="46px" height="46px" rx="5" viewBox="0 0 46 46" fill="#f2f2f2"/>
+              </svg>
+              <input class="visually-hidden" id="rocks" type="checkbox">
+              <label for="rocks">Красные скалы</label>
             </p>
           </fieldset>
           <div class="form__comment">

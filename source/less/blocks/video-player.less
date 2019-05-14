@@ -1,6 +1,6 @@
 .video-player {
   width: 320px;
-  margin: 0 auto 80px;
+  margin: 0 auto 105px;
   position: relative;
 }
 
@@ -28,27 +28,48 @@
   justify-content: space-between;
 }
 
-.video-player__remote-list--scale {
-  margin: 22px auto 39px;
+.video-player__scale {
+  margin: 22px auto 44px;
   width: 235px;
   height: 3px;
   background: rgba(255, 255, 255, 0.6);
   position: relative;
 }
 
-.video-player__remote-list--scale::after {
+.video-player__scale::after {
   content: "";
   width: 11px;
   height: 10px;
   border-radius: 50%;
   background-color: white;
   position: absolute;
-  left: 57px;
+  left: 35px;
   top: -3px;
 }
 
-.video-player__remote-list--subtitles {
+.video-player__subtitles {
   margin-left: 110px;
+}
+
+@media (max-width: 767px) {
+  .video-player__replay,
+  .video-player__subtitles path,
+  .video-player__fullscreen polygon {
+    fill: #5c6870;
+  }
+
+  .video-player__replay:hover,
+  .video-player__subtitles path:hover,
+  .video-player__fullscreen polygon:hover {
+    fill: #333333;
+  }
+
+  .video-player__replay:active,
+  .video-player__subtitles path:active,
+  .video-player__fullscreen polygon:active {
+    fill: rgba(51, 51, 51, 0.3);
+
+  }
 }
 
 @media (min-width: 768px) {
@@ -64,6 +85,19 @@
     margin: 0 auto;
   }
 
+  .video-player__scale {
+    margin: 0;
+    margin-top: 10px;
+    margin-right: 10px;
+    width: 389px;
+    height: 3px;
+  }
+
+  .video-player__scale::after {
+    left: 113px;
+    top: -3px;
+  }
+
   .video-player__remote {
     width: 648px;
     height: 93px;
@@ -73,14 +107,26 @@
   }
 
   .video-player__remote-list {
-    width: 648px;
+    width: 572px;
+    height: 20px;
+    margin-top: 35px;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
   }
 
-    .video-player__remote-list--replay{
-      order:-1;
-    }
+  .video-player__replay {
+    order: -1;
+  }
+
+  .video-player__subtitles {
+    margin-left: 0;
+  }
+
+  .video-player__replay,
+  .video-player__subtitles path,
+  .video-player__fullscreen polygon {
+    fill: white;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -101,6 +147,18 @@
   }
 
   .video-player__remote-list {
-    width: 800px;
+    width: 729px;
+    outline: 1px solid red;
+  }
+
+  .video-player__scale {
+    margin-right: 0;
+    width: 540px;
+    height: 3px;
+  }
+
+  .video-player__fullscreen {
+    margin-right: 5px;
+    margin-left: -6px;
   }
 }

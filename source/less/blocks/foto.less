@@ -3,7 +3,11 @@
   margin: 0 auto;
   font-size: 14px;
   line-height: 24px;
-  border: 1px solid @lightestgrey;
+}
+
+.fotos__item {
+  border-top: 1px solid #d5d5d5;
+  padding: 22px 20px 15px;
 }
 
 .foto__text--description,
@@ -12,15 +16,17 @@
   text-transform: uppercase;
 }
 
-.foto__text--description,
-.foto__text--like,
+.foto__text--description {
+  margin-bottom: -14px;
+}
+
 .foto__text--author {
-  margin-left: 21px;
+  margin-bottom: 10px;
 }
 
 .foto__text--like {
   position: relative;
-  margin-left: 60px;
+  margin-left: 35px;
 }
 
 .foto__text--like::before {
@@ -29,7 +35,7 @@
   height: 20px;
   background-image: url("../img/icon-like.svg");
   position: absolute;
-  left: -38px;
+  left: -37px;
   top: -5px;
   opacity: 0.3;
 }
@@ -38,7 +44,11 @@
   width: 280px;
   height: 280px;
   display: block;
-  margin: 0 auto;
+  margin-bottom: 15px;
+}
+
+.foto--bridge {
+  border-bottom: 1px solid #d5d5d5;
 }
 
 @media (min-width: 768px) {
@@ -48,7 +58,10 @@
     flex-wrap: wrap;
     justify-content: center;
   }
-
+  .fotos__item {
+    border-top: none;
+    padding: 0;
+  }
   .foto {
     width: 324px;
     background-color: @lightestgrey;
@@ -67,12 +80,13 @@
   }
 
   .foto__text--description {
-    margin-top: 22px;
+    margin-top: 15px;
   }
 
   .foto__image {
     width: 324px;
     height: 267px;
+    margin: 0;
   }
 
   .foto--sunset {
@@ -99,7 +113,13 @@
   .foto__text--like {
     width: 31px;
     align-self: flex-end;
-    margin: 35px 25px 34px auto;
+    margin: 28px 20px 34px auto;
+  }
+
+  .foto__text--like::before {
+    left: -35px;
+    top: 0;
+    opacity: 0.3;
   }
 }
 
@@ -110,7 +130,7 @@
 
   .foto {
     width: 400px;
-    min-height: 267;
+    min-height: 267px;
     position: relative;
   }
 

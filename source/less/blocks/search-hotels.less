@@ -32,6 +32,19 @@
   background-color: @blue;
 }
 
+.search-hotels__button:hover {
+  background-color: @bluedarker;
+}
+
+.search-hotels__button:active {
+  background-color: @bluedark;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.search-hotels__button:disabled {
+  background-color: #e5e5e5;
+}
+
 @media (min-width: 768px) {
   .search-hotels {
     margin: 0 auto;
@@ -50,13 +63,8 @@
   }
 
   .search-hotels__button {
-    display: block;
     width: 458px;
     margin: 0 auto 56px;
-    font-size: 21px;
-    line-height: 26px;
-    font-weight: 700;
-    color: white;
     padding: 15px 0 19px;
   }
 }
@@ -67,22 +75,17 @@
   }
 
   .search-hotels__title {
-    padding: 75px 0 30px;
+    padding: 76px 0 30px;
   }
 
   .search-hotels__text {
-    width: 435px;
+    width: 440px;
     margin: 0 auto 47px;
+    white-space: pre-line;
   }
 
   .search-hotels__button {
-    display: block;
-    width: 458px;
     margin: 0 auto 65px;
-    font-size: 21px;
-    line-height: 26px;
-    font-weight: 700;
-    color: white;
-    padding: 15px 0 19px;
+    padding: 16px 0 18px;
   }
 }

@@ -22,9 +22,7 @@ legend {
   background-color: @lightestgrey;
   border: none;
 }
-.introduce {
-  width: 320px;
-}
+
 .introduce__name,
 .introduce__surname,
 .introduce__patronymic {
@@ -55,10 +53,58 @@ legend {
  .impression__bad,
  .impression__good,
  .impression__none {
-   margin-left: 25px;
+   margin-left: 75px;
+   margin-bottom: 30px;
+   position: relative;
  }
+.impression svg {
+  width: 46px;
+  height: 46px;
+  position: absolute;
+  left: -56px;
+  top: -10px;
+}
+
+.impression input[type=radio]:checked+label::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  position: absolute;
+  left:-41px;
+  top: 5px;
+  background-color: black;
+}
+
+.form__sights p {
+  margin-left: 75px;
+  margin-bottom: 30px;
+  position: relative;
+
+}
+
+.form__sights svg {
+  width: 46px;
+  height: 46px;
+  position: absolute;
+  left: -56px;
+  top: -10px;
+}
+
+.form__sights input[type=checkbox]:checked+label::before{
+  content: "";
+  width: 23px;
+  height: 16px;
+  background: url("../img/icon-tick.svg");
+  position: absolute;
+  left:-44px;
+  top: 5px;
+}
+
+
 textarea {
   width: 279px;
+  min-height: 179px;
   background-color: @lightestgrey;
   font-weight: bold;
   font-size: 18px;
@@ -75,7 +121,8 @@ textarea {
   }
   .form__impression,
   .form__introduce {
-    width: 355px;
+    margin: 0;
+    width: 350px;
 
   }
   .form__impression {
