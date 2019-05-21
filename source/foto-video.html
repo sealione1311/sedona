@@ -4,36 +4,6 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link href="css/style.css" rel="stylesheet">
-    <!-- Pixel Glass -->
-<style>
-  HTML {
-    background-repeat: no-repeat;
-    background-position:  50% 0;
-    /* По умолчанию мобильный макет */
-    background-image: url( "img/sedona-photo-mobile.jpg" );
-  }
-  /* Планшет */
-  @media ( min-width: 760px ) {
-    HTML {
-      /* Планшетный макет */
-      background-image: url( "img/sedona-photo-tablet.jpg" );
-    }
-  }
-  /* Десктоп */
-  @media ( min-width: 960px ) {
-    HTML {
-      /* Десктопный макет */
-      background-image: url( "img/sedona-photo-desktop.jpg" );
-    }
-  }
-
-  BODY {
-    opacity: .5;
-  }
-</style>
-<link rel="stylesheet" href="../node_modules/pixel-glass/styles.css">
-<script src="../node_modules/pixel-glass/script.js"></script>
-<!-- // Pixel Glass -->
   </head>
   <body>
     <header class= "page-header">
@@ -59,10 +29,9 @@
       <section class=" main-image main-image--notindex">
         <img class="main-image__background" src="img/text-sedona.svg" width="229" height="39" alt="Добро пожаловать!">
       </section>
-      <section class="presentation">
-        <h3 class="presentation__title">Фото и видео</h3>
-        <p class="presentation__text">Не можете решиться на путешествие из-за курса?Фотографии помогут
-           вам забыть о политике и экономике.</p>
+      <section class="foto-presentation">
+        <h3 class="foto-presentation__title">Фото и видео</h3>
+        <p class="foto-presentation__text">Не можете решиться на путешествие из-за курса?Фотографии помогут&#010;вам забыть о политике и экономике.</p>
       </section>
       <section class="fotos">
         <section class="fotos__item foto foto--sunset">

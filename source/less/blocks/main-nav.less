@@ -27,23 +27,26 @@
   background-image: url("../img/icon-cross.svg");
   position: absolute;
   z-index: 12;
-  top: 0px;
-  right: 0px;
+  top: 0;
+  right: 0;
 }
 
 @media (max-width: 767px) {
   .main-nav--closed .site-menu__item {
     display: none;
   }
+
   .main-nav--nojs .main-nav__toggle::before {
     display: none;
   }
+
   .main-nav--nojs .main-nav__toggle {
     opacity: 0;
   }
- .main-nav--nojs .site-menu__item {
-     display: block;
- }
+
+  .main-nav--nojs .site-menu__item {
+    display: block;
+  }
 }
 
 @media (min-width: 768px) {
