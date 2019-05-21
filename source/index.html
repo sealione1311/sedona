@@ -6,24 +6,23 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <link href="css/style.css" rel="stylesheet">
-
   </head>
   <body>
     <header class= "page-header">
-      <nav class="main-nav">
+      <a class="page-header__logo">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+          <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="84" alt="Логотип города Седона">
+        </picture>
+      </a>
+      <nav class="main-nav main-nav--closed main-nav--nojs">
         <ul class="main-nav__list site-menu">
-          <li class="site-menu__item site-menu__item--main"><a>Главная</a></li>
+          <li class="site-menu__item site-menu__item--main site-menu__item--active"><a>Главная</a></li>
           <li class="site-menu__item site-menu__item--foto"><a href="foto-video.html">Фото и видео</a></li>
           <li class="site-menu__item site-menu__item--feedback"><a href="feedback.html">Форма отзыва</a></li>
           <li class="site-menu__item site-menu__item--link"><a href="https://htmlacademy.ru/intensive/adaptive">html academy</a></li>
         </ul>
-        <a class="main-nav__logo">
-          <picture>
-            <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
-            <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
-            <img class="main-nav__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="84" alt="Логотип города Седона">
-          </picture>
-        </a>
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
       </nav>
     </header>
@@ -56,7 +55,8 @@
           </li>
           <li class="features__item futures__item--gift">
             <h3 class="features__title">Сувениры</h3>
-            <p class="features__text">Не только китайского, но и местного производства!</p>
+            <p class="features__text">Не только китайского,
+              но и местного производства!</p>
           </li>
           <li class="features__item futures__item--food">
             <h3 class="features__title">Еда</h3>
@@ -68,7 +68,7 @@
         <section class="reason__descpiption">
           <h3 class="reason__title">Там есть мост дьявола</h3>
           <p class="reason__number">- №2 -</p>
-          <p class="reason__text reason__text--bridge">Да, по нему можно пройти! Tсли вы осмелитесь, конечно</p>
+          <p class="reason__text reason__text--bridge">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
         </section>
         <picture>
           <source media="(min-width: 1200px)" srcset="img/main-bridge-desktop@1x.jpg 1x, img/main-bridge-desktop@2x.jpg 2x">
@@ -97,13 +97,13 @@
       </section>
       <section class="search-hotels">
         <h3 class="search-hotels__title">Заинтересовались?</h3>
-        <p class="search-hotels__text">
-          Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне
+        <p class="search-hotels__text">Укажите предполагаемые даты поездки,&#010;и мы покажем вам лучшие предложения гостиниц в Седоне
         </p>
         <a class="search-hotels__button" href="search-hotel-in-sedona.html">Найти гостиницу</a>
       </section>
       <section class="map">
         <h3 class="visually-hidden">Карта города Седона</h3>
+        <iframe src="https://yandex.ru/map-widget/v1/-/CCfwvN5P" width="320" height="350" frameborder="1" allowfullscreen="true"></iframe>
       </section>
     </main>
     <footer class="page-footer">

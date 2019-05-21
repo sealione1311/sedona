@@ -6,26 +6,42 @@
 .reasons__list {
   margin: 0;
   padding: 0;
+  background-color: #eeeeee;
 }
 
 .reasons__item {
+  width: 280px;
   margin: 0 auto;
   padding: 0;
   background-color: #eeeeee;
   color: black;
+  border-bottom: 1px solid #d5d5d5;
 }
 
 .reasons__item--square h3 {
-  margin-top: 25px;
+  margin-top: 22px;
+  margin-bottom: 10px;
+}
+
+.reasons__item--square p {
+  margin-bottom: 27px;
+}
+
+.reasons__item--road {
+  padding-top: 10px;
+}
+
+.reasons__item--tourists {
+  padding-top: 9px;
+  border-bottom: none;
 }
 
 .reason__text--square {
-  margin-top: 1px;
   width: 238px;
 }
 
 .reason__text--road {
-  margin-bottom: 36px;
+  margin-bottom: 30px;
   width: 207px;
 }
 
@@ -47,19 +63,36 @@
   .reasons__item {
     display: flex;
     flex-direction: column;
+    border-bottom: none;
   }
 
   .reasons__item h3 {
-    margin: 43px auto 13px;
+    margin: 44px auto 8px;
   }
 
   .reasons__item p {
     margin: 0 auto;
   }
 
+  .reasons__item--road {
+    padding-top: 0;
+  }
+
+  .reasons__item--tourists {
+    padding-top: 0;
+  }
+
   .reasons__item--road p {
     width: 132px;
     margin-bottom: 45px;
+  }
+
+  .reason__text--square {
+    width: 159px;
+  }
+
+  .reason__text--tourists {
+    width: 145px;
   }
 }
 
@@ -72,11 +105,19 @@
     width: 400px;
   }
 
+  .reasons__item h3 {
+    margin-bottom: 10px;
+  }
+
   .reasons__item--road p {
     width: 262px;
   }
 
   .reasons__item--square p {
     width: 285px;
+  }
+
+  .reasons__item--tourists p {
+    width: 260px;
   }
 }

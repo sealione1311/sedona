@@ -1,12 +1,12 @@
 .video-description__title {
-  margin-top: 39px;
+  margin-top: 33px;
   font-size: 18px;
   line-height: 26px;
 }
 
 .video-description__text {
   width: 240px;
-  margin: 35px auto;
+  margin: 25px auto 36px;
   font-size: 14px;
   line-height: 24px;
 }
@@ -16,4 +16,21 @@
   margin: 0 auto;
   text-transform: uppercase;
   text-align: center;
+}
+
+@media (min-width: 768px) {
+  .video-description {
+    width: 768px;
+  }
+
+  .video-description__title {
+    font-size: 30px;
+    line-height: 26px;
+    margin-top: 68px;
+  }
+
+  .video-description__text {
+    width: 415px;
+    margin: 0 auto 73px;
+  }
 }
