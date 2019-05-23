@@ -67,7 +67,7 @@ legend {
 
 .form__impression {
   margin-top: 18px;
-  padding: 24px 41px 40px 25px;
+  padding: 24px 0 40px 0;
 }
 
 .form__impression label {
@@ -75,7 +75,7 @@ legend {
   line-height: 26px;
   font-weight: bold;
   text-transform: none;
-  margin-left: 70px;
+  margin-left: 95px;
 }
 
 .form__sights label {
@@ -169,12 +169,16 @@ legend {
   margin-bottom: 2px;
 }
 
-.impression svg {
+.impression input[type="radio"] + label::after {
+  content: "";
   width: 52px;
   height: 52px;
+  border-radius: 50%;
+  background-color: #f2f2f2;
   position: absolute;
-  left: -5px;
+  left: 16px;
   top: -12px;
+  cursor: pointer;
 }
 
 .impression input[type="radio"]:checked + label::before {
@@ -183,9 +187,10 @@ legend {
   height: 20px;
   border-radius: 50%;
   position: absolute;
-  left: 11px;
+  left: 32px;
   top: 4px;
   background-color: black;
+  z-index: 6;
 }
 
 .sights__park,
@@ -200,12 +205,32 @@ legend {
   margin-bottom: 40px;
 }
 
-.form__sights svg {
+.form__sights input[type="checkbox"] + label::after {
+  content: "";
   width: 52px;
   height: 52px;
+  border-radius: 5px;
+  background-color: #f2f2f2;
   position: absolute;
   left: -5px;
   top: -12px;
+  user-select: none;
+  cursor: pointer;
+}
+
+.impression input[type="radio"] + label:hover::after,
+.form__sights input[type="checkbox"] + label:hover::after {
+  background-color: #e5e5e5;
+}
+
+.impression input[type="radio"]:focus + label::after,
+.form__sights input[type="checkbox"]:focus + label::after {
+  box-shadow: 0 0 0 3px @blue;
+}
+
+.impression input[type="radio"] + label:active::after,
+.form__sights input[type="checkbox"] + label:active::after {
+  background-color: #d5d5d5;
 }
 
 .form__sights input[type="checkbox"]:checked + label::before {
@@ -216,6 +241,22 @@ legend {
   position: absolute;
   left: 11px;
   top: 5px;
+  z-index: 5;
+}
+
+.impression input[type="radio"]:checked + label:active::before,
+.form__sights input[type="checkbox"]:checked + label:active::before {
+  opacity: 0.3;
+}
+
+.form input:hover {
+  background-color: #e5e5e5;
+}
+
+.form input:focus {
+  background-color: white;
+  box-shadow: 0 0 0 4px #e5e5e5 inset;
+  outline: 0;
 }
 
 .form__comment {
@@ -252,6 +293,16 @@ textarea {
   color: white;
   background-color: @blue;
   border: none;
+  cursor: pointer;
+}
+
+.form__submit:hover {
+  background-color: @bluedarker;
+}
+
+.form__submit:active {
+  background-color: @bluedark;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 @media (min-width: 768px) {
@@ -280,9 +331,25 @@ textarea {
     border-bottom: none;
   }
 
+  .impression input[type="radio"] + label::after {
+    left: 1px;
+    top: -12px;
+    cursor: pointer;
+  }
+
+  .impression input[type="radio"]:checked + label::before {
+    left: 17px;
+    top: 4px;
+    cursor: pointer;
+  }
+
   .form__impression {
     border-right: 1px solid #d5d5d5;
     order: -1;
+  }
+
+  .form__impression label {
+    margin-left: 69px;
   }
 
   .form__impression legend {
@@ -494,10 +561,6 @@ textarea {
     font-size: 21px;
     line-height: 26px;
     font-weight: bold;
-    text-transform: uppercase;
-    color: white;
-    background-color: @blue;
-    border: none;
     position: relative;
   }
 
@@ -519,22 +582,152 @@ textarea {
     width: 1200px;
   }
 
-  .form__impression,
-  .form__introduce {
-    width: 550px;
-    outline: 1px solid red;
+  .form__impression {
+    margin: 0;
+    padding: 0;
+    width: 470px;
+    padding-left: 127px;
   }
 
-  .form__contacts,
+  .form__impression legend {
+    margin-left: 70px;
+  }
+
+  .form__introduce {
+    width: 519px;
+    padding-left: 80px;
+  }
+
+  .introduce__name {
+    width: 400px;
+  }
+
+  .introduce__name input {
+    width: 328px;
+  }
+
+  .introduce__surname {
+    width: 400px;
+  }
+
+  .introduce__surname input {
+    width: 290px;
+  }
+
+  .introduce__patronymic {
+    width: 400px;
+  }
+
+  .introduce__patronymic input {
+    width: 290px;
+  }
+
+  .form__contacts {
+    width: 1200px;
+    padding-left: 119px;
+    padding-right: 120px;
+  }
+
+  .contacts__wrapper {
+    display: flex;
+  }
+
+  .contacts__tel {
+    margin-left: -20px;
+    margin-top: 55px;
+  }
+
+  .contacts__tel--hidden {
+    display: none;
+  }
+
+  .contacts__tel::after {
+    left: 360px;
+    top: 5px;
+  }
+
+  .contacts__mail {
+    margin-left: 58px;
+    margin-top: 55px;
+  }
+
+  .contacts__mail::after {
+    left: 440px;
+    top: 5px;
+  }
+
+  .form__contacts input {
+    width: 295px;
+    margin-left: 14px;
+  }
+
   .form__sights {
     width: 1200px;
+    padding: 0;
+  }
+
+  .form__sights legend::before {
+    content: "";
+    width: 275px;
+    left: -345px;
+    top: 22px;
+  }
+
+  .form__sights legend::after {
+    content: "";
+    width: 275px;
+    right: -343px;
+    top: 22px;
+  }
+
+  .wrapper {
+    width: 1080px;
+    margin: 55px 0 20px 0;
+    padding: 0 0 0 120px;
+    flex-wrap: wrap;
+  }
+
+  .sights__park {
+    margin-left: 78px;
+  }
+
+  .sights__rocks {
+    margin-left: 74px;
   }
 
   .form__comment {
     width: 1200px;
   }
 
+  .form__comment p::before {
+    content: "";
+    width: 275px;
+    left: -347px;
+    top: 15px;
+  }
+
+  .form__comment p::after {
+    content: "";
+    width: 275px;
+    right: -347px;
+    top: 15px;
+  }
+
   textarea {
-    width: 960px;
+    width: 940px;
+  }
+
+  .form__submit {
+    width: 480px;
+    margin: 0;
+    margin-left: 120px;
+    margin-top: 46px;
+    margin-bottom: -20px;
+    padding: 19px 0 16px 0;
+    position: relative;
+  }
+
+  .form__submit::after {
+    left: 792px;
   }
 }
