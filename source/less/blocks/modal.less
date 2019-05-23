@@ -44,8 +44,68 @@
   text-transform: uppercase;
 }
 
+.modal__close:hover {
+  background-color: @bluedarker;
+}
+
+.modal__close:active {
+  background-color: @bluedark;
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .modal-thanks .modal__close {
   width: 280px;
   padding: 22px 75px;
   margin: 22px auto 20px;
+}
+
+@media (min-width: 768px) {
+  .modal-thanks {
+    width: 458px;
+    padding: 64px 91px 0;
+    background-image: linear-gradient(white 201px, @lightestgrey 201px);
+  }
+
+  .modal__title {
+    font-size: 30px;
+  }
+
+  .modal__text {
+    padding: 0;
+    width: 414px;
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 40px;
+  }
+
+  .modal-thanks .modal__close {
+    width: 458px;
+    padding: 21px 150px;
+    margin: 44px auto;
+    font-size: 21px;
+  }
+
+  .modal-error .modal__title {
+    width: 220px;
+    font-size: 30px;
+    line-height: 40px;
+    margin: 0 auto;
+    margin-bottom: 18px;
+  }
+
+  .modal-error {
+    width: 276px;
+    padding: 64px 62px 0;
+  }
+
+  .modal-error .modal__text {
+    width: 277px;
+    margin: 0 auto;
+  }
+
+  .modal-error .modal__close {
+    width: 272px;
+    margin: 22px auto 45px;
+  }
 }

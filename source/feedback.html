@@ -16,19 +16,19 @@
   @media ( min-width: 760px ) {
     HTML {
       /* Планшетный макет */
-      background-image: url( "img/sedona-form-tablet.jpg" );
+      background-image: url( "img/sedona-form-tabet.jpg" );
     }
   }
   /* Десктоп */
   @media ( min-width: 960px ) {
     HTML {
       /* Десктопный макет */
-      background-image: url( "img/sedona-photo-destop.jpg" );
+      background-image: url( "img/sedona-form-deskop.jpg" );
     }
   }
 
   BODY {
-    opacity: .5
+    opacity: 1
   }
 </style>
 <link rel="stylesheet" href="../node_modules/pixel-glass/styles.css">
@@ -82,63 +82,49 @@
           </fieldset>
           <fieldset class="form__contacts contacts">
             <legend>Контактная информация:</legend>
+            <div class="contacts__wrapper">
             <p class="contacts__tel">
-              <label>Контактный телефон*<input type="tel" required name="tel"placeholder="Введите телефон"pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}">
+              <label><span class="contacts__tel--hidden"> Контактный </span> телефон*:<input type="tel" required name="tel" placeholder="Введите телефон" pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}">
               </label>
             </p>
             <p class="contacts__mail">
-              <label>Электронная почта*<input type="email" required name="email"placeholder="Введите email">
+              <label>Электронная почта*:<input type="email" required name="email" placeholder="Введите email">
               </label>
             </p>
+          </div>
           </fieldset>
           <fieldset class="form__impression impression">
             <legend>Ваше общее впечатление:</legend>
-
             <p class="impression__good">
-              <svg><circle r="23" cx="26" cy="26" width="46px" height="46px" viewBox="0 0 52 52" fill="#f2f2f2" stroke="#f2f2f2" stroke-width="6"/>
-              </svg>
               <input class="visually-hidden" id="radio-good" type="radio" name="impression" value="Скорее положительное" checked>
               <label for="radio-good">Скорее положительное</label>
             </p>
             <p class="impression__bad">
-              <svg><circle r="23" cx="26" cy="26" width="46px" height="46px" viewBox="0 0 52 52" fill="#f2f2f2" stroke="#f2f2f2" stroke-width="6"/>
-              </svg>
               <input class="visually-hidden" id="radio-bad" type="radio" name="impression" value="Скорее отрицательное">
               <label for="radio-bad">Скорее отрицательное</label>
             </p>
             <p class="impression__none">
-              <svg><circle r="23" cx="26" cy="26" width="46px" height="46px" viewBox="0 0 52 52" fill="#f2f2f2" stroke="#f2f2f2" stroke-width="6"/>
-              </svg>
               <input class="visually-hidden" id="radio-none" type="radio" name="impression" value="Затрудняюсь ответить">
               <label for="radio-none">Затрудняюсь ответить</label>
             </p>
-
           </fieldset>
           <fieldset class="form__sights sights">
             <legend>Посещенные достопримечательности:</legend>
             <div class="wrapper">
             <p class="sights__bridge">
-              <svg><rect width="52px" height="52px" rx="5" viewBox="0 0 52 52" fill="#f2f2f2"/>
-              </svg>
-              <input class="visually-hidden" id="bridge" type="checkbox" name="bridge" checked>
+              <input class="visually-hidden" id="bridge" type="checkbox" name="devil-bridge" checked>
               <label for="bridge">Мост Дьявола</label>
             </p>
             <p class="sights__mountain">
-              <svg><rect width="52px" height="52px" rx="5" viewBox="0 0 52 52" fill="#f2f2f2"/>
-              </svg>
-              <input class="visually-hidden" id="mountain" type="checkbox" name="mountain" checked>
+              <input class="visually-hidden" id="mountain" type="checkbox" name="moun-tain" checked>
               <label for="mountain">Гора-Колокол</label>
             </p>
             <p class="sights__park">
-              <svg><rect width="52px" height="52px" rx="5" viewBox="0 0 52 52" fill="#f2f2f2"/>
-              </svg>
-              <input class="visually-hidden" id="park" type="checkbox" name="park" checked>
+              <input class="visually-hidden" id="park" type="checkbox" name="slide-park" checked>
               <label for="park">Слайд-парк</label>
             </p>
             <p class="sights__rocks">
-              <svg><rect width="52px" height="52px" rx="5" viewBox="0 0 52 52" fill="#f2f2f2"/>
-              </svg>
-              <input class="visually-hidden" id="rocks" type="checkbox" name="rocks">
+              <input class="visually-hidden" id="rocks" type="checkbox" name="red-rocks">
               <label for="rocks">Красные скалы</label>
             </p>
           </div>
@@ -201,5 +187,7 @@
       <p class="modal__text">Спасибо за ваше участие,ваш отзыв уже поступил к нам.&#010;В ближайшее время мы опубликуем его на сайте.<p>
       <button class="modal__close" type="button">Закрыть окно</button>
     </section>
+    <script src="js/picturefill.min.js">
+    </script>
   </body>
 </html>
