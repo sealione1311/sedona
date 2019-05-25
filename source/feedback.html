@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
     <link href="css/stylemin.css" rel="stylesheet">
   </head>
   <body>
@@ -27,7 +29,7 @@
     <main class="main-page">
       <h1 class="visually-hidden">Добро пожаловать в великолепный город Седона</h1>
       <section class="main-image main-image--notindex">
-        <img class="main-image__background" src="img/text-sedona.svg" width="281" height="214" alt="Добро пожаловать!">
+        <img class="main-image__background" src="img/text-sedona.svg" width="229" height="39" alt="Добро пожаловать!">
       </section>
       <div class="feedback">
         <h3 class="feedback__title">Оставьте свой отзыв</h3>
@@ -58,7 +60,7 @@
               </label>
             </p>
             <p class="contacts__mail">
-              <label>Электронная почта*:<input type="email" required name="email" placeholder="Введите email">
+              <label>Электронная почта*:<input type="email" required name="email" placeholder="Введите e-mail">
               </label>
             </p>
           </div>
@@ -101,7 +103,7 @@
           </fieldset>
           <div class="form__comment">
             <p>Опишите свои эмоции:</p>
-            <textarea name="comment" id="comment-field" rows="7">Опишите подробно все свои восторги</textarea>
+            <textarea class="form__textarea" name="comment" id="comment-field">Опишите подробно все свои восторги</textarea>
           </div>
           <button class="form__submit" type="submit">Отправить отзыв</button>
         </form>

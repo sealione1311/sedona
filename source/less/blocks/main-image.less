@@ -12,8 +12,8 @@
   @media (min-resolution: 144dpi),
     (min-resolution: 1.5dppx) {
     background-image: url("../img/bg-back-mobile@2x.jpg");
-    background-size: 320px 389px;
-    background-position: right 0 top 0;
+    background-size: 768px 389px;
+    background-position: right -225px top 0;
   }
 }
 
@@ -30,7 +30,7 @@
   @media (min-resolution: 144dpi),
     (min-resolution: 1.5dppx) {
     background-image: url("../img/bg-back-mobile@2x.jpg");
-    background-size: 320px 158px;
+    background-size: 768px 389px;
     background-position: right -225px top -232px;
   }
 }
@@ -44,12 +44,12 @@
 .main-image::after {
   content: "";
   width: 320px;
-  height: 27px;
+  height: 26px;
   background-image: url("../img/bg-intro-triangle-mobile.svg");
   position: absolute;
-  bottom: -1px;
+  bottom: 0;
   left: 0;
-  right: 0;
+
 }
 
 @media (min-width: 768px) {
@@ -59,11 +59,13 @@
     width: 768px;
     height: 518px;
     background: #8fb3cc url("../img/bg-back-tablet@1x.jpg") no-repeat;
+    background-position: left bottom;
 
     @media (min-resolution: 144dpi),
       (min-resolution: 1.5dppx) {
       background-image: url("../img/bg-back-tablet@2x.jpg");
       background-size: 768px 518px;
+      background-position: left bottom;
     }
   }
 
@@ -79,9 +81,9 @@
     height: 57px;
     background-image: url("../img/bg-intro-triangle-tablet.svg");
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: -2px;
+    bottom: -1px;
+    left: -1px;
+    right: 0;
   }
 
   .main-image--notindex {
@@ -98,7 +100,7 @@
       (min-resolution: 1.5dppx) {
       background-image: url("../img/bg-back-tablet@2x.jpg");
       background-position: right 0 top -219px;
-      background-size: 768px 290px;
+      background-size: 768px 518px;
     }
   }
 
@@ -145,9 +147,9 @@
 
     @media (min-resolution: 144dpi),
       (min-resolution: 1.5dppx) {
-      background-image: url("../img/bg-back-tablet@2x.jpg");
+      background-image: url("../img/bg-back-desktop@2x.jpg");
       background-position: right 0 top -217px;
-      background-size: 768px 290px;
+      background-size: 1200px 518px;
     }
   }
 }
