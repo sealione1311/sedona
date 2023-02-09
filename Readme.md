@@ -1,8 +1,4 @@
-# Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
-
-* Студент: [Татьяна  Мирзова](https://up.htmlacademy.ru/adaptive/16/user/19581).
-* Наставник: [Оксана Вайнруб](https://htmlacademy.ru/profile/id166797).
-
+Седона
 ---
 
 **Обратите внимание, что папка с вашими исходными файлами — `source/`.**
